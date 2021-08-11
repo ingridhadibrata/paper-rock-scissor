@@ -3,23 +3,38 @@ class Game {
   constructor() {
   }
 
+  // Fungsi ini untuk mengacak pilihan komputer
   randomize() {
+    // Menyimpan pilihan ke dalam array
+    // Ada 3 element yg bisa diakses mulai dari index-0, index-1, index-2
     const choices = ["rock", "paper", "scissor"];
+
+    // Mengacak angka dari 0-2.9 kemudian bulatkan ke bawah
+    // sehingga, hasil akhir hanya berupa angka 0, 1, atau 2
+    // hasil ini nantinya bisa digunakkan untuk mengakses array yang memiliki 3 elemen secara acak. 
     const index = Math.floor(Math.random() * 2.9);
 
+    // Akses element yg ada di dalam array choice dengan index hasil acakan
     return choices[index];
   }
 
   playGame(playerChoice) {
+    // Pertama, hapus semua background agak player bisa main berkali kali tanpa harus mengklik reset secara manual
     this.resetBackground();
 
+    // Cetak pilihan player & atur background pada pilihan tsb
     console.log(`Player memilih ${playerChoice}`);
     this.setBackground('player', playerChoice);
 
+    // Cetak pilihan computer & atur background pada pilihan tsb
     const comChoice = this.randomize();
     console.log(`COM memilih ${comChoice}`);
     this.setBackground('com', comChoice);
 
+    // Bandingkan pilihan computer & player
+    // Jika sama, panggil fungsi resultDraw()
+    // Jika player menang, panggil fungsi resultPlayerWin()
+    // Jika player kalah, panggil fungsi resultPlayerLose()
     if (playerChoice == comChoice) {
       return this.resultDraw();
     }
@@ -50,11 +65,16 @@ class Game {
   }
 
   setBackground(playerType, choice){
+    // Ambil element berdasar id, kemudian berikan kelas custom-selected
+    // Cara di bawah bisa dilakukan karena penamaan id menggunakan format jenisplayer-pilihan
     const selectedElement = document.getElementById(`${playerType}-${choice}`);
+
+    // Kelas custom-selected memberikan background, cek .custom-selected di style.css
     selectedElement.classList.add("custom-selected");
   }
 
   resetBackground() {
+    // hapus style background pada pilihan player & computer
     document.getElementById("player-rock").classList.remove("custom-selected");
     document.getElementById("player-paper").classList.remove("custom-selected");
     document.getElementById("player-scissor").classList.remove("custom-selected");
@@ -62,40 +82,55 @@ class Game {
     document.getElementById("com-paper").classList.remove("custom-selected");
     document.getElementById("com-scissor").classList.remove("custom-selected");
 
+    // hapus style background pada tulisan VS
     document.getElementById("vs").classList.remove("custom-green-vs-box");
     document.getElementById("vs").classList.remove("custom-green-darker-vs-box");
     
+    // atur kembali tulisan menjadi VS & kembalikan style asal
     document.getElementById("vs").innerHTML = "VS";
     document.getElementById("vs").classList.add("custom-vs-text");
   }
 
   resultDraw() {
+    // Cetak tulisan ke console
     console.log("DRAW");
     
+    // Ambil element & ubah tulisannya
     const vsElement = document.getElementById("vs");
     vsElement.innerHTML = "DRAW";
     
+    // Hapus kelas custom-vs-text & tambahkan kelas custom-green-darker-vs-box
+    // Cek kelas custom-vs-text & custom-green-darker-vs-box di style.css
     vsElement.classList.remove("custom-vs-text");
     vsElement.classList.add("custom-green-darker-vs-box");
   }
 
   resultPlayerLose() {
+    // Cetak tulisan ke console
     console.log("COM WIN");
 
+    
+    // Ambil element & ubah tulisannya
     const vsElement = document.getElementById("vs");
     vsElement.innerHTML = "COM WIN";
 
-    vsElement.classList.remove("custom-vs");
+    // Hapus kelas custom-vs-text & tambahkan kelas custom-green-vs-box
+    // Cek kelas custom-vs-text & custom-green-vs-box di style.css
+    vsElement.classList.remove("custom-vs-text");
     vsElement.classList.add("custom-green-vs-box");
   }
 
   resultPlayerWin() {
+    // Cetak tulisan ke console
     console.log("PLAYER WIN");
 
+    // Ambil element & ubah tulisannya
     const vsElement = document.getElementById("vs");
     vsElement.innerHTML = "PLAYER 1 WIN";
 
-    vsElement.classList.remove("custom-vs");
+    // Hapus kelas custom-vs-text & tambahkan kelas custom-green-vs-box
+    // Cek kelas custom-vs-text & custom-green-vs-box di style.css
+    vsElement.classList.remove("custom-vs-text");
     vsElement.classList.add("custom-green-vs-box");
   }
 }
@@ -132,6 +167,7 @@ playerScissor.onclick = function () {
 }
 
 reset.onclick = function () {
+  // Pencetakan tulisan ini hanya dilakukan ketika mengklik gambar reset
   console.log("--- GAME RESET ---");
 
   game.resetBackground();
