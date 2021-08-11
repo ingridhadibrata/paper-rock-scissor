@@ -32,6 +32,11 @@ body{
 }
 
 .custom-green-darker-vs-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  
   background-color: #035B0C;
   color: #FFFFFF;
   font-size: 2rem;
@@ -40,6 +45,11 @@ body{
 }
 
 .custom-green-vs-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  
   background-color: #4C9653;
   color: #FFFFFF;
   font-size: 2rem;
