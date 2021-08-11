@@ -1,0 +1,27 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #9C835F;
+}
+
+.custom-back-button{
+  color: #724C21;
+}
+
+.custom-image{
+  margin-left: auto;
+  margin-right: auto;
+  width: 4em;
+}
+
+.custom-game-title{
+  color: #F9B23D;
+}
+
+.custom-game-section{
+  position: relative;
+  top: 5vh
+}
+
+.custom-vs{
+  color: red;
+}
