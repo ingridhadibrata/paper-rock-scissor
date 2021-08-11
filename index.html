@@ -5,7 +5,7 @@
   <title>Play Game</title>
 
   <!-- Open Sans Font -->
-  <link href="http//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
 
   <!-- CSS -->
   <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -27,7 +27,7 @@
 
       <!-- Second column for logo -->
       <div class="col-1 text-center">
-        <img src="./assets/img/logo.png" class="custom-image" />
+        <img src="./assets/img/logo.png" class="custom-logo" />
       </div>
 
       <!-- Third column for game title text -->
@@ -44,14 +44,14 @@
     <!-- First row for player/comp -->
     <div class="row my-3 justify-content-center align-items-center">
 
-      <div class="col-2 fs-4 fw-bold">
+      <div class="col-2 fs-4 fw-bold custom-game-player-name">
         PLAYER 1
       </div>
 
       <div class="col-2">
       </div>
 
-      <div class="col-2 fs-4 fw-bold">
+      <div class="col-2 fs-4 fw-bold custom-game-player-name">
         COM
       </div>
 
@@ -60,15 +60,15 @@
     <!-- Second row for rock option -->
     <div class="row my-5 justify-content-center align-items-center">
 
-      <div class="col-2">
-        <img class="custom-image" src="./assets/img/batu.png" />
+      <div class="col-2 custom-choice-background align-items-center" id="player-rock">
+        <img class="custom-choice" src="./assets/img/batu.png" />
       </div>
 
       <div class="col-2">
       </div>
 
-      <div class="col-2">
-        <img class="custom-image" src="./assets/img/batu.png" />
+      <div class="col-2 custom-choice-background" id="com-rock">
+        <img class="custom-choice" src="./assets/img/batu.png" />
       </div>
 
     </div>
@@ -76,16 +76,16 @@
     <!-- Thrid row for paper option -->
     <div class="row my-5 justify-content-center align-items-center">
 
-      <div class="col-2">
-        <img class="custom-image" src="./assets/img/kertas.png" />
+      <div class="col-2 custom-choice-background" id="player-paper">
+        <img class="custom-choice" src="./assets/img/kertas.png" />
       </div>
 
-      <div class="col-2 fs-1 fw-bold custom-vs">
+      <div class="col-2 mx-2 fw-bold custom-vs-background custom-vs-text" id="vs">
         VS
       </div>
 
-      <div class="col-2">
-        <img class="custom-image" src="./assets/img/kertas.png" />
+      <div class="col-2 custom-choice-background" id="com-paper">
+        <img class="custom-choice" src="./assets/img/kertas.png" />
       </div>
 
     </div>
@@ -93,15 +93,15 @@
     <!-- Fourth row for scissor option -->
     <div class="row my-5 justify-content-center align-items-center">
 
-      <div class="col-2">
-        <img class="custom-image" src="./assets/img/gunting.png" />
+      <div class="col-2 custom-choice-background" id="player-scissor">
+        <img class="custom-choice" src="./assets/img/gunting.png" />
       </div>
 
       <div class="col-2">
       </div>
 
-      <div class="col-2">
-        <img class="custom-image" src="./assets/img/gunting.png" />
+      <div class="col-2 custom-choice-background" id="com-scissor">
+        <img class="custom-choice" src="./assets/img/gunting.png" />
       </div>
 
     </div>
@@ -112,8 +112,8 @@
       <div class="col-2">
       </div>
 
-      <div class="col-2">
-        <img class="custom-image" src="./assets/img/refresh.png" />
+      <div class="col-2" id="reset">
+        <img class="custom-choice" src="./assets/img/refresh.png" />
       </div>
 
       <div class="col-2">

@@ -7,7 +7,7 @@ body{
   color: #724C21;
 }
 
-.custom-image{
+.custom-logo{
   margin-left: auto;
   margin-right: auto;
   width: 4em;
@@ -22,6 +22,50 @@ body{
   top: 5vh
 }
 
-.custom-vs{
-  color: red;
+.custom-vs-background{
+  width: 12rem;
+}
+
+.custom-vs-text{
+  color: #BD0000;
+  font-size: 4rem;
+}
+
+.custom-green-darker-vs-box{
+  background-color: #035B0C;
+  color: #FFFFFF;
+  font-size: 2rem;
+  transform: rotate(-20deg);
+  border-radius: 5%;
+}
+
+.custom-green-vs-box{
+  background-color: #4C9653;
+  color: #FFFFFF;
+  font-size: 2rem;
+  transform: rotate(-20deg);
+  border-radius: 5%;
+}
+
+
+.custom-game-player-name{
+  width: 8rem;
+}
+
+.custom-choice{
+  width: 4em;
+}
+
+.custom-choice-background{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 8rem;
+  height: 8rem;
+}
+
+.custom-selected{
+  background-color: #C4C4C4;
+  border-radius: 10%;
 }
